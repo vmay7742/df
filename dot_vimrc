@@ -1,0 +1,10 @@
+set number
+syntax on
+set shiftwidth=4
+set tabstop=4
+set mouse=a
+set scrolloff=10
+set hlsearch
+set showmatch
+set wrap
+set nocompatible

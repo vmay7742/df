@@ -1,0 +1,53 @@
+!Monochrome
+URxvt.internalBorder: 10
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 96x28
+!Xft*dpi: 64
+!URxvt.font: xft:monospace:style=Regular:size=8.5:antialias=true
+!URxvt.font: xft:JetBrainsMono Nerd Font Mono:size=10
+URxvt.font: xft:Iosevka Nerd Font Mono:size=10:antialias=true
+!URxvt.font: xft:DejaVuSansMono Nerd Font:size=8
+Xft*antialias: true
+urxvt*depth: 32
+urxvt.iso14755: false
+URxvt*scrollBar: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+urxvt.perl-ext-common: resize-font
+
+! special
+URxvt*.foreground:   #ffffff
+!URxvt*.background:  [60]#202020
+URxvt*.background:   [98]#1e1e1e
+URxvt*.cursorColor:  #ffffff
+! black
+URxvt*.color0:       #000000
+URxvt*.color8:       #ffffff
+! red
+URxvt*.color1:       #ffffff
+URxvt*.color9:       #ff0032
+! green
+URxvt*.color2:       #ffffff
+URxvt*.color10:      #ffffff
+! yellow
+URxvt*.color3:       #ffffff
+URxvt*.color11:      #ffffff
+! blue
+URxvt*.color4:       #5e5e5e
+URxvt*.color12:      #ffffff
+! magenta
+URxvt*.color5:       #ffffff
+URxvt*.color13:      #ffffff
+! cyan
+URxvt*.color6:       #ffffff
+URxvt*.color14:      #ffffff
+! white
+URxvt*.color7:       #ffffff
+URxvt*.color15:      #202020
+
+! sxiv
+Sxiv*foreground: #dd3eff
+Sxiv*background: #202020
+Sxiv.font: xft:monospace:style=Regular:size=9: antialias=true
