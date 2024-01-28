@@ -123,11 +123,11 @@ interval = 1
 ;format-volume = <ramp-volume> <label-volume>
 format-volume = <ramp-volume>
 ;label-volume =%percentage:2%%
-ramp-volume-0 = " 󰕿"
-ramp-volume-1 = " 󰖀"
-ramp-volume-2 = " 󰕾"
-ramp-volume-3 = " "
-label-muted = " 󰖁"
+ramp-volume-0 = "  󰕿 "
+ramp-volume-1 = "  󰖀 "
+ramp-volume-2 = "  󰕾 "
+ramp-volume-3 = "   "
+label-muted = "  󰖁 "
 format-muted-foreground = #ff6767
 
 
