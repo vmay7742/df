@@ -145,7 +145,7 @@ type = internal/pulseaudio
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ;use-ui-max = false
 
-interval = 1
+interval = 3
 ;format-volume = <ramp-volume> <label-volume>
 format-volume = <ramp-volume>
 ;label-volume =%percentage:2%%
