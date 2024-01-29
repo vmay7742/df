@@ -116,7 +116,6 @@ label-urgent-foreground = ${colors.alert}
 label-occupied-foreground = #ffffff
 
 
-
 [module/memory]
 type = internal/memory
 interval = 2
