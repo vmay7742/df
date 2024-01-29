@@ -93,27 +93,27 @@ label-empty-foreground = #8f8f8f
 label-empty-padding = 1.9
 
 
-[module/workspaces]
-type = internal/xworkspaces
-pin-workspaces = true
-enable-click = true
-enable-scroll = true
-format-padding = 1
-format = <label-state>
-icon-default = 
-label-active = 
-label-occupied = 
-label-empty = 
+;[module/workspaces]
+;type = internal/xworkspaces
+;pin-workspaces = true
+;enable-click = true
+;enable-scroll = true
+;format-padding = 1
+;format = <label-state>
+;icon-default = 
+;label-active = 
+;label-occupied = 
+;label-empty = 
 
-label-empty-padding = 2
-label-active-padding = 2
-label-urgent-padding = 2
-label-occupied-padding = 2
+;label-empty-padding = 2
+;label-active-padding = 2
+;label-urgent-padding = 2
+;label-occupied-padding = 2
 
-label-empty-foreground = #8f8f8f
-label-active-foreground = #ffffff
-label-urgent-foreground = ${colors.alert}
-label-occupied-foreground = #ffffff
+;label-empty-foreground = #8f8f8f
+;label-active-foreground = #ffffff
+;label-urgent-foreground = ${colors.alert}
+;label-occupied-foreground = #ffffff
 
 
 [module/memory]
@@ -229,7 +229,6 @@ type = custom/text
 label = %{A1:bspc node -s biggest.window:} 󱆮  %{A}%{A}%{A}
 label-foreground = #606060
 label-padding = 0
-
 
 
 ;[module/updates]
