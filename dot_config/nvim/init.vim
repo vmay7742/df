@@ -6,9 +6,9 @@
 :set shiftwidth=4
 :set smarttab
 
-
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 :set cursorline
-hi cursorline ctermbg=236 ctermfg=231 gui=NONE guibg=black
+hi cursorline ctermbg=236 ctermfg=231 gui=NONE guibg=black term=bold cterm=bold
 hi CursorLineNR ctermbg=236 ctermfg=231 cterm=bold term=bold gui=NONE guibg=NONE
 
 call plug#begin()
