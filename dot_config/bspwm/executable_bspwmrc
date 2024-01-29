@@ -40,7 +40,7 @@ bspc rule -a Nitrogen state=floating center=on
 bspc rule -a discord state=floating center=on rectangle=1200x890+0+0
 bspc rule -a Mousepad state=floating center=on rectangle=910x980+0+0
 bspc rule -a obsidian state=floating center=on rectangle=1170x980+0+0
-bspc rule -a Pavucontrol state=floating center=on rectangle=650x675+0+0
+bspc rule -a Pavucontrol state=floating center=on rectangle=825x675+0+0
 bspc rule -a Nvidia-settings state=floating center=on rectangle=830x830+0+0
 bspc rule -a File-roller state=floating center=on
 bspc rule -a '*:*:Picture-in-Picture' state=floating
