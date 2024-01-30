@@ -1,3 +1,15 @@
+:root {
+  --sfwindow: #0f0f0f;
+}
+
+:root {
+  --toolbar-bgcolor: var(--sfsecondary) !important;
+  --tabs-border-color: var(--sfsecondary) !important;
+  --lwt-sidebar-background-color: var(--sfwindow) !important;
+  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
+}
+
+
 #tabbrowser-tabs {
   visibility: collapse !important;
 }
@@ -42,3 +54,32 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
+#urlbar-background,#urlbar {
+    border-radius: 6px !important;
+}
+
+#urlbar .urlbar-input-box {
+   text-align: center;
+}
+
+
+#window, #main-window, #toolbar-menubar, #TabsToolbar, #PersonalToolbar, #navigator-toolbox{
+background-color: transparent !important;
+-moz-appearance: none !important;
+background-image: none !important;
+}
+
+.tabbrowser-tab {
+  border-radius: 0px !important;
+}
+tab.tabbrowser-tab:hover > stack > .tab-background {
+  border-radius: 0px !important;
+}
+.tab-background[selected="true"] {
+background: rgba(86, 86, 86 ,0.3) !important;
+-moz-appearance: none !important;
+
+background-image: none !important;
+box-shadow: none !important;
+border-radius: 0px !important;
+}
