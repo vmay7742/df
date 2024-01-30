@@ -219,14 +219,14 @@ label-padding = 0
 
 [module/fs]
 type = custom/text
-label = %{A1:bspc desktop -l next:}  %{A}%{A}%{A}
+label = %{A1:bspc desktop -l next:}  %{A}%{A}%{A}
 label-foreground = #606060
 label-padding = 0
 
 
 [module/bw]
 type = custom/text
-label = %{A1:bspc node -s biggest.window:} 󱆮  %{A}%{A}%{A}
+label = %{A1:bspc node -s biggest.window:}   %{A}%{A}%{A}
 label-foreground = #606060
 label-padding = 0
 
@@ -247,7 +247,7 @@ type = internal/battery
 format-charging = <label-charging>
 format-discharging = <label-discharging>
 label-charging = %percentage%%
-label-discharging = - %percentage%%
+label-discharging = -%percentage%%
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
 battery = BAT0
