@@ -212,14 +212,14 @@ label-disconnected-foreground = ${colors.foreground.alt}
 
 [module/cl]
 type = custom/text
-label = %{A1:bspc node -c:} 󰅙 %{A}%{A}%{A}
+label = %{A1:bspc node -c:} 󰅙%{A}%{A}%{A}
 label-foreground = #bd2c40
 label-padding = 0
 
 
 [module/fs]
 type = custom/text
-label = %{A1:bspc desktop -l next:}  %{A}%{A}%{A}
+label = %{A1:bspc desktop -l next:} %{A}%{A}%{A}
 label-foreground = #606060
 label-padding = 0
 
