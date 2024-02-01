@@ -46,9 +46,9 @@ font-2 = Meslo:style=Bold:size=7.4;1
 
 modules-left = workspaces bspwm title
 modules-center = date 
-modules-right = battery filesystem updates cpu memory internet pulseaudio xwindow cl fs bw
+modules-right = battery filesystem updates cpu memory internet pulseaudio xwindow cl fs bw cw
 
-tray-position = right
+;tray-position = right
 tray-detached = false
 tray-maxsize = 14
 tray-padding = 2
@@ -128,7 +128,7 @@ type = internal/date
 label = %date% %time%
 interval = 1
 
-date = %a %d %b
+date = %a %b %d 
 date-alt = %A, %d.%m.%y
 
 #12 hour
@@ -195,7 +195,7 @@ interface = enp5s0
 interval = 1
 udspeed-minwidth = 3
 format-connected = <label-connected>
-label-connected = %downspeed%%upspeed%
+label-connected = %downspeed% %upspeed%
 ;format-connected-prefix = "net "
 label-connected-foreground = ${colors.foreground.alt}
 label-disconnected = Disconnected
@@ -212,7 +212,7 @@ label-disconnected-foreground = ${colors.foreground.alt}
 
 [module/cl]
 type = custom/text
-label = %{A1:bspc node -c:} 󰅙%{A}%{A}%{A}
+label = %{A1:bspc node -c:} %{A}%{A}%{A}
 label-foreground = #bd2c40
 label-padding = 0
 
@@ -220,15 +220,23 @@ label-padding = 0
 [module/fs]
 type = custom/text
 label = %{A1:bspc desktop -l next:} %{A}%{A}%{A}
-label-foreground = #606060
+label-foreground = #7a7a7a
 label-padding = 0
 
 
-[module/bw]
+;[module/bw]
+;type = custom/text
+;label = %{A1:bspc node -s biggest.window:}       %{A}%{A}%{A}
+;label-foreground = #7a7a7a
+;label-padding = 0
+
+
+[module/cw]
 type = custom/text
-label = %{A1:bspc node -s biggest.window:}   %{A}%{A}%{A}
-label-foreground = #606060
+label = %{A1:bspc node -f next.local.!hidden.window:}       %{A}%{A}%{A}
+label-foreground = #7a7a7a
 label-padding = 0
+
 
 
 ;[module/updates]
@@ -247,7 +255,7 @@ type = internal/battery
 format-charging = <label-charging>
 format-discharging = <label-discharging>
 label-charging = %percentage%%
-label-discharging = -%percentage%%
+label-discharging = - %percentage%%
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
 battery = BAT0
