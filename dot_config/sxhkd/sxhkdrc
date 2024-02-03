@@ -9,6 +9,8 @@ super + d
         dmenu_run -nb "#1e1e1e" -sb "#15539e"
 super + e
         thunar
+super + shift + m
+        mousepad
 super + shift + f
         firefox
 super + shift + x
