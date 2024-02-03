@@ -1,10 +1,9 @@
 [colors]
 ;background = #331E1E1E or #59 or #272727
 ; for opacity use #bf1e1e1e
-#background = #0f0f0f
 background = #73000000
 ;background-alt = #5a5a5a
-foreground = #c9c9c9
+foreground = #c8c8c8
 foreground-alt = #c9c9c9
 primary = #1b9fc6
 secondary = #ffffff
@@ -29,8 +28,9 @@ foreground = ${colors.foreground}
 ;line-size = 5
 ;line-color = #00564d
 ;border-size = 1
+border-bottom-size = 1
+border-color = #66323232
 ;border-color = #0D00564d
-;border-color = #000000
 
 padding-left = 5
 padding-right = 1
@@ -46,7 +46,7 @@ font-2 = Meslo:style=Bold:size=7.4;1
 
 modules-left = workspaces bspwm title
 modules-center = date 
-modules-right = battery filesystem updates cpu memory internet pulseaudio xwindow cl fs bw cw
+modules-right = battery filesystem updates cpu memory internet pipewire-mic pulseaudio-mic pulseaudio xwindow cl fs bw cw
 
 ;tray-position = right
 tray-detached = false
@@ -128,7 +128,7 @@ type = internal/date
 label = %date% %time%
 interval = 1
 
-date = %a %b %d 
+date = %b %d %a 
 date-alt = %A, %d.%m.%y
 
 #12 hour
@@ -141,6 +141,7 @@ time-alt = %H:%M:%S
 
 [module/pulseaudio]
 type = internal/pulseaudio
+click-right = pavucontrol -t 3
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ;use-ui-max = false
@@ -149,12 +150,32 @@ interval = 3
 ;format-volume = <ramp-volume> <label-volume>
 format-volume = <ramp-volume>
 ;label-volume =%percentage:2%%
-ramp-volume-0 = "  󰕿 "
-ramp-volume-1 = "  󰖀 "
-ramp-volume-2 = "  󰕾 "
-ramp-volume-3 = "   "
-label-muted = "  󰖁 "
+ramp-volume-0 = " 󰕿 "
+ramp-volume-1 = " 󰖀 "
+ramp-volume-2 = " 󰕾 "
+ramp-volume-3 = "  "
+label-muted = " 󰖁 "
 format-muted-foreground = #ff6767
+
+
+[module/pipewire-mic]
+type = custom/script
+exec = $HOME/.config/polybar/modules/pipewire-mic.sh
+tail = true
+click-left = $HOME/.config/polybar/modules/pipewire-mic.sh --toggle &
+click-right = pavucontrol -t 4
+format = <label>
+;label-padding = 1
+
+;[module/pulseaudio-mic]
+;type = custom/script
+;exec = ~/.config/polybar/modules/pulseaudio-mic.sh
+;tail = true
+;click-left = ~/.config/polybar/modules/pulseaudio-mic.sh --toggle &
+;scroll-up = ~/.config/polybar/modules/pulseaudio-mic.sh --increase &
+;scroll-down = ~/.config/polybar/modules/pulseaudio-mic.sh --decrease &
+;click-right = pavucontrol -t 4
+;format =  <label>
 
 
 [module/title]
@@ -220,21 +241,21 @@ label-padding = 0
 [module/fs]
 type = custom/text
 label = %{A1:bspc desktop -l next:} %{A}%{A}%{A}
-label-foreground = #7a7a7a
+label-foreground = #303030
 label-padding = 0
 
 
 ;[module/bw]
 ;type = custom/text
 ;label = %{A1:bspc node -s biggest.window:}       %{A}%{A}%{A}
-;label-foreground = #7a7a7a
+;label-foreground = #303030
 ;label-padding = 0
 
 
 [module/cw]
 type = custom/text
 label = %{A1:bspc node -f next.local.!hidden.window:}       %{A}%{A}%{A}
-label-foreground = #7a7a7a
+label-foreground = #303030
 label-padding = 0
 
 
