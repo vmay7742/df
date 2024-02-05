@@ -138,7 +138,6 @@ tail = true
 click-left = $HOME/.config/polybar/modules/pipewire-mic.sh --toggle &
 click-right = pavucontrol -t 4
 format = <label>
-format-mute-foreground = #ff6767
 ;label-padding = 1
 
 [module/title]
