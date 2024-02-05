@@ -1,17 +1,13 @@
 [colors]
-;background = #331E1E1E or #59 or #272727
-; for opacity use #bf1e1e1e
 background = #73000000
-;background-alt = #5a5a5a
 foreground = #c8c8c8
-foreground-alt = #c9c9c9
-primary = #1b9fc6
-secondary = #ffffff
 alert = #bd2c40
-shade1 = #73000000
+tray = #73000000
 
 [bar/bar1]
 dpi = 105
+;dpi-x = 103
+;dpi-y = 103
 width = 100%
 height = 22
 ;offset-x = 0%
@@ -19,57 +15,46 @@ height = 22
 radius = 0.0
 fixed-center = true
 ;bottom = true
-;dpi-x = 103
-;dpi-y = 103
-
 background = ${colors.background}
 foreground = ${colors.foreground}
-
 ;line-size = 5
 ;line-color = #00564d
 ;border-size = 1
 border-bottom-size = 1
 border-color = #66323232
-;border-color = #0D00564d
-
 padding-left = 5
-padding-right = 1
+padding-right = 6
+
+;font-0 = Helvetica:size=7.2;2
+font-0 = Meslo:style=Regular:size=7.4;1
+; ICONS
+font-1 = RobotoMono Nerd Font:size=9;2
+font-2 = Meslo:style=Bold:size=7.4;1
 
 module-margin-left = 1
 module-margin-right = 1
-
-;font-0 = Helvetica:size=7.2;2
-font-0 = Meslo:style=Regular:size=7.4;1.3
-; ICONS
-font-1 = RobotoMono Nerd Font:size=9;2.17
-font-2 = Meslo:style=Bold:size=7.4;0.5
-
 modules-left = workspaces bspwm title
 modules-center = date 
-modules-right = battery filesystem updates cpu memory internet pipewire-mic pulseaudio-mic pulseaudio xwindow cl fs bw cw
+modules-right = battery filesystem updates cpu memory internet pipewire-mic pulseaudio xwindow cl fs bw cw
 
 ;tray-position = right
 tray-detached = false
 tray-maxsize = 14
 ;tray-offset-x = -2
+;tray-offset-y =
 ;tray-scale = 1.0
 ;tray-transparent = true
 ;tray-background = #0063ff
-tray-background = ${color.shade1}
+tray-background = ${color.tray}
 tray-padding = 2
 
 enable-ipc = true
-
 wm-restack = bspwm
-
 ;override-redirect = true
-
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
-
 cursor-click = pointer
 cursor-scroll = ns-resize
-
 
 [module/bspwm]
 type = internal/bspwm
@@ -82,17 +67,12 @@ label-occupied-foreground = #cfcfcf
 label-occupied-padding = 1.9
 
 label-urgent = %index%
-;label-urgent-background = ${colors.alert}
-;label-urgent-foreground = ${colors.foreground} 
 label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 1.9
 
 label-empty = %index%
-;label-empty-foreground = ${colors.foreground-alt}
-;label-empty-foreground = #9d9d9d
 label-empty-foreground = #8f8f8f
 label-empty-padding = 1.9
-
 
 ;[module/workspaces]
 ;type = internal/xworkspaces
@@ -107,16 +87,15 @@ label-empty-padding = 1.9
 ;label-occupied = 
 ;label-empty = 
 
-;label-empty-padding = 2
 ;label-active-padding = 2
-;label-urgent-padding = 2
 ;label-occupied-padding = 2
+;label-urgent-padding = 2
+;label-empty-padding = 2
 
-;label-empty-foreground = #8f8f8f
 ;label-active-foreground = #ffffff
-;label-urgent-foreground = ${colors.alert}
 ;label-occupied-foreground = #ffffff
-
+;label-urgent-foreground = ${colors.alert}
+;label-empty-foreground = #8f8f8f
 
 [module/memory]
 type = internal/memory
@@ -124,33 +103,26 @@ interval = 2
 label = %gb_used%
 ;label = %percentage_used%%
 
-
 [module/date]
 type = internal/date
 label = %date% %time%
 interval = 1
-
 date = %b %d %a 
 date-alt = %A, %d.%m.%y
-
 #12 hour
 time = %l:%M %p
-
 #24 hour
 #time = %H:%M
 time-alt = %H:%M:%S
 
-
 [module/pulseaudio]
 type = internal/pulseaudio
 click-right = pavucontrol -t 3
-
+interval = 3
+format-volume = <ramp-volume>
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ;use-ui-max = false
-
-interval = 3
 ;format-volume = <ramp-volume> <label-volume>
-format-volume = <ramp-volume>
 ;label-volume =%percentage:2%%
 ramp-volume-0 = " 󰕿 "
 ramp-volume-1 = " 󰖀 "
@@ -159,7 +131,6 @@ ramp-volume-3 = "  "
 label-muted = " 󰖁 "
 format-muted-foreground = #ff6767
 
-
 [module/pipewire-mic]
 type = custom/script
 exec = $HOME/.config/polybar/modules/pipewire-mic.sh
@@ -167,28 +138,20 @@ tail = true
 click-left = $HOME/.config/polybar/modules/pipewire-mic.sh --toggle &
 click-right = pavucontrol -t 4
 format = <label>
+format-mute-foreground = #ff6767
 ;label-padding = 1
-
-;[module/pulseaudio-mic]
-;type = custom/script
-;exec = ~/.config/polybar/modules/pulseaudio-mic.sh
-;tail = true
-;click-left = ~/.config/polybar/modules/pulseaudio-mic.sh --toggle &
-;scroll-up = ~/.config/polybar/modules/pulseaudio-mic.sh --increase &
-;scroll-down = ~/.config/polybar/modules/pulseaudio-mic.sh --decrease &
-;click-right = pavucontrol -t 4
-;format =  <label>
-
 
 [module/title]
 type = internal/xwindow
+; Label with mouse actions (A1: left click; A2: middle click; A3: right click)
+;label = %{A1:xdotool getwindowfocus windowkill:} 󰅙 %{A}%{A}%{A}
 format = <label>
 label = %class%
 ;label = %title%
 label-maxlen = 40
 format-font = 3
 ;format-padding = 1
-
+;label-padding = 0
 
 [module/cpu]
 type = internal/cpu
@@ -199,17 +162,13 @@ format-warn = <label-warn>
 warn-percentage = 85
 format-warn-foreground = #ffe31f
 
-
 ;[module/filesystem]
 ;type = internal/fs
 ;interval = 1200
-
 ;mount-0 = /
-
 ;label-mounted = %{F#ffffff}%mountpoint%%{F-}: %percentage_used%%
 ;label-unmounted = %mountpoint% not mounted
-;label-unmounted-foreground = ${colors.foreground-alt}
-
+;label-unmounted-foreground = ${colors.foreground}
 
 [module/internet]
 type = internal/network
@@ -217,22 +176,11 @@ interface = enp5s0
 ;Laptop
 ;interface = wlan0
 interval = 1
-udspeed-minwidth = 3
 format-connected = <label-connected>
-label-connected = %downspeed:7% %upspeed:7%
+label-connected = %downspeed% %upspeed%
 ;format-connected-prefix = "net "
-label-connected-foreground = ${colors.foreground.alt}
 label-disconnected = Disconnected
-label-disconnected-foreground = ${colors.foreground.alt}
-
-
-;[module/xwindow]
-;type = internal/xwindow
-; Label with mouse actions (A1: left click; A2: middle click; A3: right click)
-;label = %{A1:xdotool getwindowfocus windowkill:} 󰅙 %{A}%{A}%{A}
-;label-foreground = #bd2c40
-;label-padding = 0
-
+udspeed-minwidth = 2
 
 [module/cl]
 type = custom/text
@@ -240,13 +188,11 @@ label = %{A1:bspc node -c:} %{A}%{A}%{A}
 label-foreground = #bd2c40
 label-padding = 0
 
-
 [module/fs]
 type = custom/text
 label = %{A1:bspc desktop -l next:} %{A}%{A}%{A}
 label-foreground = #303030
 label-padding = 0
-
 
 ;[module/bw]
 ;type = custom/text
@@ -254,21 +200,17 @@ label-padding = 0
 ;label-foreground = #303030
 ;label-padding = 0
 
-
 [module/cw]
 type = custom/text
-label = %{A1:bspc node -f next.local.!hidden.window:}       %{A}%{A}%{A}
+label = %{A1:bspc node -f next.local.!hidden.window:} %{A}%{A}%{A}
 label-foreground = #303030
 label-padding = 0
-
-
 
 ;[module/updates]
 ;type = custom/script
 ;exec = pacman -Qu | wc -l
 ;format-prefix = "󰇣 "
 ;interval = 60
-
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -281,21 +223,14 @@ format-discharging = <label-discharging>
 label-charging = %percentage%%
 label-discharging = - %percentage%%
 ; Use the following command to list batteries and adapters:
-; $ ls -1 /sys/class/power_supply/
+; ls -1 /sys/class/power_supply/
 battery = BAT0
 adapter = ACAD
 poll-interval = 5
 
-
 ;[module/space]
 ;type = custom/text
 ;content = "|"
-
-
-;expand-right = true
-
-format-spacing = 1
-
 
 [settings]
 screenchange-reload = true
@@ -303,9 +238,11 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
+;expand-right = true
+format-spacing = 1
 
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+;margin-top = 0
+;margin-bottom = 0
 
 ; vim:ft=dosini
