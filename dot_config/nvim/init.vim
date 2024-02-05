@@ -1,7 +1,6 @@
 :set number
 :set autoindent
 :set mouse=a
-
 :set tabstop=4
 :set shiftwidth=4
 :set smarttab
@@ -16,8 +15,8 @@ call plug#begin()
 
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/ryanoasis/vim-devicons'
-Plug 'itchyny/lightline.vim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'itchyny/lightline.vim'
 Plug 'romgrk/barbar.nvim'
 
 call plug#end()
@@ -37,6 +36,7 @@ nnoremap <silent> <A-w> <Cmd>:BufferClose<CR>
 nnoremap <silent> <A-t> <Cmd>:tabnew<CR>
 nnoremap <silent> <A-,> <Cmd>BufferPrevious<CR>
 nnoremap <silent> <A-.> <Cmd>BufferNext<CR>
+nnoremap <silent> <A-c> <Cmd>BufferClose<CR>
 "Goto buffer in position
 nnoremap <silent> <A-1> <Cmd>BufferGoto 1<CR>
 nnoremap <silent> <A-2> <Cmd>BufferGoto 2<CR>
