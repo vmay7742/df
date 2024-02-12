@@ -184,7 +184,7 @@ udspeed-minwidth = 2
 [module/cl]
 type = custom/text
 label = %{A1:bspc node -c:} %{A}%{A}%{A}
-label-foreground = #bd2c40
+label-foreground = #303030
 label-padding = 0
 
 [module/fs]
