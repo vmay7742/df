@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #000000;
+        --background: #0f0f0f;
         --icons: rgb(251,251,254);
         --tab-separator: transparent;
         --tab-active-background: rgb(42,42,42);
