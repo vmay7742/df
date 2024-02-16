@@ -101,7 +101,7 @@ border-radius: 0px !important;
 
 #sidebar-header {
     visibility: collapse !important;
-} 
+}
 
 
 /* waits 60 seconds before hiding inactive tabs */
@@ -163,6 +163,8 @@ border-radius: 0px !important;
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
   margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
 }
+
+#permissions-granted-icon {display: none!important;}
 
 
 
