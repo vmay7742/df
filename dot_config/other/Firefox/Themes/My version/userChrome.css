@@ -1,13 +1,9 @@
 :root {
   --sfwindow: #0f0f0f;
+  --sfsecondary: #0f0f0f;
 }
 
-:root {
-  --toolbar-bgcolor: var(--sfsecondary) !important;
-  --tabs-border-color: var(--sfsecondary) !important;
-  --lwt-sidebar-background-color: var(--sfwindow) !important;
-  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
-}
+
 
 
 #tabbrowser-tabs {
@@ -63,6 +59,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 
+
+/*Blur S*/
+
 #window, #main-window, #toolbar-menubar, #TabsToolbar, #PersonalToolbar, #navigator-toolbox{
 background-color: transparent !important;
 -moz-appearance: none !important;
@@ -83,6 +82,32 @@ background-image: none !important;
 box-shadow: none !important;
 border-radius: 0px !important;
 }
+
+/*Blur E*/
+
+
+/*Blur for address bar S*/
+
+#appcontent {
+  margin-bottom: 8px;
+background: transparent !important;
+}
+#nav-bar {
+  box-shadow: none !important;
+}
+#urlbar:not([open]) > #urlbar-background {
+  background-color: transparent !important;
+}
+#urlbar[open] > #urlbar-background {
+  background-color: #222 !important;
+}
+:root{ background-color: transparent !important }
+#main-window,
+#tabbrowser-tabpanels{ background: transparent !important }
+
+/*Blur for address bar E*/
+
+
 
 #identity-box.extensionPage > #identity-icon-box{ display: none }
 
@@ -165,11 +190,6 @@ border-radius: 0px !important;
 }
 
 #permissions-granted-icon {display: none!important;}
-
-
-
-
-
 
 
 
