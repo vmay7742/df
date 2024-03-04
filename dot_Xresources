@@ -13,7 +13,7 @@ urxvt.iso14755: false
 URxvt*scrollBar: true
 URxvt*scrollBar_right: true
 URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
+URxvt.cursorUnderline: true
 URxvt.saveline: 2048
 urxvt.perl-ext-common: resize-font
 
@@ -21,8 +21,8 @@ urxvt.perl-ext-common: resize-font
 URxvt*.foreground:   #c5c8c6
 URxvt*.background:   [98]#1e1e1e
 URxvt*.cursorColor:  #c5c8c6
-URxvt*scrollColor:   #1e1e1e
-URxvt*troughColor:   #191919
+URxvt*scrollColor:   #252525
+URxvt*troughColor:   #1e1e1e
 
 ! sxiv
 Sxiv*foreground: #dd3eff
