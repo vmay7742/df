@@ -34,7 +34,7 @@ bspc rule -a obs state=floating center=on
 bspc rule -a Sxiv state=floating center=on
 bspc rule -a mpv state=floating center=on rectangle=1050x730+0+0
 bspc rule -a URxvt state=floating center=on
-bspc rule -a Thunar state=floating center=on rectangle=870x740+0+0
+bspc rule -a Thunar state=floating center=on rectangle=870x500+0+0
 bspc rule -a zathura state=floating center=on
 bspc rule -a Nitrogen state=floating center=on
 bspc rule -a discord state=floating center=on rectangle=1200x700+0+0
