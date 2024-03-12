@@ -35,7 +35,7 @@ module-margin-left = 1
 module-margin-right = 1
 modules-left = workspaces bspwm title
 modules-center = date 
-modules-right = battery filesystem updates cpu memory internet pipewire-mic pulseaudio xwindow cl fs bw cw
+modules-right = battery updates cpu memory internet filesystem pipewire-mic pulseaudio xwindow cl cw fs bw
 
 ;tray-position = right
 tray-detached = false
@@ -155,8 +155,7 @@ format-font = 3
 [module/cpu]
 type = internal/cpu
 interval = 1 
-label = CPU:%percentage:3%%
-label-foreground = ${colors.foreground}
+label = %percentage:3%%
 format-warn = <label-warn>
 warn-percentage = 85
 format-warn-foreground = #ffe31f
@@ -165,9 +164,9 @@ format-warn-foreground = #ffe31f
 ;type = internal/fs
 ;interval = 1200
 ;mount-0 = /
-;label-mounted = %{F#ffffff}%mountpoint%%{F-}: %percentage_used%%
+;label-mounted = %{F#ffffff}%mountpoint%%{F-}: %percentage_used%
+label-mounted = %used%
 ;label-unmounted = %mountpoint% not mounted
-;label-unmounted-foreground = ${colors.foreground}
 
 [module/internet]
 type = internal/network
@@ -183,27 +182,27 @@ udspeed-minwidth = 2
 
 [module/cl]
 type = custom/text
-label = %{A1:bspc node -c:} %{A}%{A}%{A}
-label-foreground = #303030
+label = %{A1:bspc node -c:} 󰅙%{A}%{A}%{A}
+label-foreground = #404040
 label-padding = 0
 
 [module/fs]
 type = custom/text
-label = %{A1:bspc desktop -l next:} %{A}%{A}%{A}
-label-foreground = #303030
+label = %{A1:bspc desktop -l next:} 󰐗%{A}%{A}%{A}
+label-foreground = #404040
+label-padding = 0
+
+[module/cw]
+type = custom/text
+label = %{A1:bspc node -f next.local.!hidden.window:} 󱍸%{A}%{A}%{A}
+label-foreground = #404040
 label-padding = 0
 
 ;[module/bw]
 ;type = custom/text
-;label = %{A1:bspc node -s biggest.window:}       %{A}%{A}%{A}
-;label-foreground = #303030
+;label = %{A1:bspc node -s biggest.window:} %{A}%{A}%{A}
+;label-foreground = #404040
 ;label-padding = 0
-
-[module/cw]
-type = custom/text
-label = %{A1:bspc node -f next.local.!hidden.window:} %{A}%{A}%{A}
-label-foreground = #303030
-label-padding = 0
 
 ;[module/updates]
 ;type = custom/script
