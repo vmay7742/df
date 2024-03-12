@@ -37,7 +37,6 @@ nnoremap <silent> <A-t> <Cmd>:tabnew<CR>
 nnoremap <silent> <A-,> <Cmd>BufferPrevious<CR>
 nnoremap <silent> <A-.> <Cmd>BufferNext<CR>
 nnoremap <silent> <A-c> <Cmd>BufferClose<CR>
-"Goto buffer in position
 nnoremap <silent> <A-1> <Cmd>BufferGoto 1<CR>
 nnoremap <silent> <A-2> <Cmd>BufferGoto 2<CR>
 nnoremap <silent> <A-3> <Cmd>BufferGoto 3<CR>
