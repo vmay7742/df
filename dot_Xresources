@@ -16,7 +16,7 @@ URxvt.saveline: 2048
 urxvt.perl-ext-common: resize-font
 
 ! special
-URxvt*.foreground:   #c5c8c6
+URxvt*.foreground:   #f1f1f1
 URxvt*.background:   [98]#1e1e1e
 URxvt*.cursorColor:  #c5c8c6
 URxvt*scrollColor:   #252525
