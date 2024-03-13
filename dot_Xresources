@@ -2,6 +2,7 @@ URxvt.internalBorder: 10
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 96x28
+Xcursor.size: 1
 !Xft*dpi: 64
 !URxvt.font: xft:monospace:style=Regular:size=8.5:antialias=true
 URxvt.font: xft:Iosevka Nerd Font Mono:size=10:antialias=true
