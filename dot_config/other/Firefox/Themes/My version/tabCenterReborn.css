@@ -22,7 +22,7 @@
         --input-text: rgb(251,251,254);
         --input-text-focus: rgb(251,251,254);
         --identity-color-toolbar: rgb(251,251,254);
-        --tablist-separator: #333333;
+        --tablist-separator: transparent;
         --overflow-indicator-border: #cccccc;
     }
 }
