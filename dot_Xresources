@@ -7,14 +7,20 @@ Xcursor.size: 1
 !URxvt.font: xft:monospace:style=Regular:size=8.5:antialias=true
 URxvt.font: xft:Iosevka Nerd Font Mono:size=10:antialias=true
 Xft*antialias: true
-urxvt*depth: 32
-urxvt.iso14755: false
+URxvt*depth: 32
+URxvt.iso14755: false
 URxvt*scrollBar: true
 URxvt*scrollBar_right: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: true
-URxvt.saveline: 2048
-urxvt.perl-ext-common: resize-font
+URxvt.saveline: 50000
+URxvt.perl-ext-common: resize-font
+
+!Save all the terminal output to a file ctrl+print / shift+print
+URxvt.print-pipe: cat > $HOME/scrollback
 
 ! special
 URxvt*.foreground:   #f1f1f1
