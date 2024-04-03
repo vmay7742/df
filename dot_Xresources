@@ -26,6 +26,7 @@ URxvt.print-pipe: cat > $HOME/scrollback
 URxvt*.foreground:   #f1f1f1
 URxvt*.background:   [98]#1e1e1e
 URxvt*.cursorColor:  #c5c8c6
+! scrollbar
 URxvt*scrollColor:   #252525
 URxvt*troughColor:   #1e1e1e
 
