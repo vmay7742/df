@@ -4,7 +4,8 @@ force_color_prompt=yes
 
 #PS1="\W > "
 #PS1='\[\033[00;35m\]\W\[\033[00m\] \[\033[00;31m\]> \[\033[00m\]'
-PS1='\W \[\033[00;31m\]> \[\033[00m\]'
+PS1='\[\033[01;02;03;97m\]\w\[\033[01;02;03;97m\] \[\033[00;31m\]> \[\033[00m\]'
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
