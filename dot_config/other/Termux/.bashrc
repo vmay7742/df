@@ -1,6 +1,9 @@
 # .bashrc
 
-PS1="\W > "
+force_color_prompt=yes
+
+#PS1="\W > "
+PS1='\[\033[01;37m\]\w\[\033[01;37m\] \[\033[00;31m\]> \[\033[00m\]'
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
