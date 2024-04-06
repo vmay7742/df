@@ -23,6 +23,8 @@ hi Comment ctermfg=114
 
 hi Search ctermfg=231 ctermbg=26 cterm=NONE
 
+hi StatusLine ctermbg=NONE cterm=NONE
+
 nmap <silent> <C-t> :tabnew<CR>
 nmap <silent> <C-n> :tabnext<CR>
 nmap <silent> <C-x> :tabclose<CR>
