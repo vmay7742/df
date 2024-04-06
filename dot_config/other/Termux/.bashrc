@@ -10,7 +10,7 @@ PS1='\[\033[01;37m\]\w\[\033[01;37m\] \[\033[00;31m\]> \[\033[00m\]'
 
 alias ls='ls --color=auto'
 
-alias v='nvim'
+alias v='vim'
 alias t='tmux'
 alias l='ls -1'
 alias b='bc -q'
