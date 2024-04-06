@@ -15,7 +15,7 @@ URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 URxvt.cursorBlink: true
-URxvt.cursorUnderline: true
+URxvt.cursorUnderline: false
 URxvt.saveline: 50000
 URxvt.perl-ext-common: resize-font
 
