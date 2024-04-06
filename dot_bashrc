@@ -12,7 +12,7 @@ alias ls='ls --color=auto'
 
 #source ~/aliases
 
-alias v='nvim'
+alias v='vim'
 alias r='ranger'
 alias t='tmux'
 alias l='ls -1'
