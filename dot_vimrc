@@ -21,7 +21,7 @@ hi TabLineSel ctermfg=50 ctermbg=NONE cterm=NONE gui=NONE guibg=NONE term=NONE
 
 hi Comment ctermfg=114
 
-hi Search ctermfg=231 ctermbg=202 cterm=NONE
+hi Search ctermfg=231 ctermbg=26 cterm=NONE
 
 nmap <silent> <C-t> :tabnew<CR>
 nmap <silent> <C-n> :tabnext<CR>
