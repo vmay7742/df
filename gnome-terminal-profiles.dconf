@@ -1,10 +1,5 @@
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-background-color='rgb(28,28,28)'
-cursor-shape='block'
-default-size-columns=95
-default-size-rows=30
-font='DejaVuSansM Nerd Font Mono 11'
-foreground-color='rgb(241,241,241)'
+background-color='rgb(0,0,0)'
+foreground-color='rgb(255,255,255)'
 palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(0,205,0)', 'rgb(205,205,0)', 'rgb(0,0,205)', 'rgb(205,0,205)', 'rgb(0,205,205)', 'rgb(250,235,215)', 'rgb(64,64,64)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,255,0)', 'rgb(0,0,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
-use-system-font=false
 use-theme-colors=false
